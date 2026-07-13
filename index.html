@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,8 +17,26 @@
     --text-dim: #55626d;
     --accent-teal: #4fd1c5;
     --accent-amber: #f5a623;
+    --nav-bg: rgba(10,14,18,0.85);
+    --shadow-color: rgba(0,0,0,0.65);
+    --selection-text: #062522;
     --mono: 'JetBrains Mono', monospace;
     --sans: 'IBM Plex Sans', sans-serif;
+  }
+
+  :root[data-theme="light"]{
+    --bg: #f5f7f9;
+    --bg-panel: #ffffff;
+    --bg-panel-raised: #edf1f4;
+    --border: #d7dee4;
+    --text-primary: #12181f;
+    --text-muted: #4c5a68;
+    --text-dim: #7c8794;
+    --accent-teal: #0e8f83;
+    --accent-amber: #b4590c;
+    --nav-bg: rgba(245,247,249,0.85);
+    --shadow-color: rgba(15,23,31,0.14);
+    --selection-text: #f2fbf9;
   }
 
   *{ box-sizing: border-box; }
@@ -29,8 +47,9 @@
     color: var(--text-primary);
     font-family: var(--sans);
     line-height: 1.6;
+    transition: background-color .25s ease, color .25s ease;
   }
-  ::selection{ background: var(--accent-teal); color: #062522; }
+  ::selection{ background: var(--accent-teal); color: var(--selection-text); }
 
   a{ color: var(--accent-teal); text-decoration: none; }
   a:hover{ text-decoration: underline; }
@@ -49,7 +68,7 @@
   /* ---------- NAV ---------- */
   nav{
     position: sticky; top:0; z-index: 50;
-    background: rgba(10,14,18,0.85);
+    background: var(--nav-bg);
     backdrop-filter: blur(8px);
     border-bottom: 1px solid var(--border);
   }
@@ -109,7 +128,7 @@
   .cmdk-modal{
     width: min(560px, 90vw);
     background: var(--bg-panel); border: 1px solid var(--border); border-radius: 10px;
-    box-shadow: 0 30px 80px -20px rgba(0,0,0,0.7);
+    box-shadow: 0 30px 80px -20px var(--shadow-color);
     overflow: hidden;
     transform: translateY(-8px);
     transition: transform .15s ease;
@@ -169,7 +188,7 @@
     border: 1px solid var(--border);
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 20px 60px -20px rgba(0,0,0,0.6);
+    box-shadow: 0 20px 60px -20px var(--shadow-color);
   }
   .term-bar{
     display:flex; align-items:center; gap:8px;
@@ -481,6 +500,7 @@
       <li><a href="#projects">projects</a></li>
       <li><a href="#contact">contact</a></li>
       <li><button class="nav-search-btn" id="openSearch" aria-haspopup="dialog">search <kbd>⌘K</kbd></button></li>
+      <li><button class="nav-search-btn" id="themeToggle" aria-label="Toggle color theme">☀ light</button></li>
     </ul>
   </div>
 </nav>
@@ -891,8 +911,13 @@ yMMNNNNNNNmmmmmNNMmhs+/-`
     let width, height, dpr, nodes = [], packets = [];
     const NODE_COUNT = 42;
     const MAX_DIST = 130;
-    const TEAL = '79,209,197';
-    const AMBER = '245,166,35';
+    const PALETTE = {
+      dark: { teal: '79,209,197', amber: '245,166,35', lineAlpha: 0.3, nodeAlpha: 0.55 },
+      light: { teal: '14,143,131', amber: '180,89,12', lineAlpha: 0.28, nodeAlpha: 0.6 },
+    };
+    function colors(){
+      return document.documentElement.dataset.theme === 'light' ? PALETTE.light : PALETTE.dark;
+    }
 
     function resize(){
       const rect = hero.getBoundingClientRect();
@@ -918,6 +943,7 @@ yMMNNNNNNNmmmmmNNMmhs+/-`
 
     function draw(){
       ctx.clearRect(0, 0, width, height);
+      const { teal: TEAL, amber: AMBER, lineAlpha, nodeAlpha } = colors();
       const edges = [];
 
       if (!reduceMotion){
@@ -933,7 +959,7 @@ yMMNNNNNNNmmmmmNNMmhs+/-`
           const dx = nodes[i].x - nodes[j].x, dy = nodes[i].y - nodes[j].y;
           const dist = Math.sqrt(dx * dx + dy * dy);
           if (dist < MAX_DIST){
-            const alpha = (1 - dist / MAX_DIST) * 0.3;
+            const alpha = (1 - dist / MAX_DIST) * lineAlpha;
             ctx.strokeStyle = `rgba(${TEAL},${alpha})`;
             ctx.lineWidth = 1;
             ctx.beginPath();
@@ -962,7 +988,7 @@ yMMNNNNNNNmmmmmNNMmhs+/-`
       packets = packets.filter(p => p.t < 1);
 
       nodes.forEach(n => {
-        ctx.fillStyle = `rgba(${TEAL},0.55)`;
+        ctx.fillStyle = `rgba(${TEAL},${nodeAlpha})`;
         ctx.beginPath();
         ctx.arc(n.x, n.y, 1.6, 0, Math.PI * 2);
         ctx.fill();
@@ -971,6 +997,7 @@ yMMNNNNNNNmmmmmNNMmhs+/-`
 
     if (reduceMotion){
       draw();
+      window.__redrawHeroCanvas = draw;
     } else {
       (function loop(){ draw(); requestAnimationFrame(loop); })();
     }
@@ -987,6 +1014,25 @@ yMMNNNNNNNmmmmmNNMmhs+/-`
   document.getElementById('uptimeYears').textContent = Math.max(years, 0) + "+";
 
   // Live nav clock
+  // Light / dark theme toggle
+  const themeToggle = document.getElementById('themeToggle');
+  const rootEl = document.documentElement;
+
+  function applyTheme(theme){
+    rootEl.dataset.theme = theme;
+    themeToggle.textContent = theme === 'light' ? '\u263D dark' : '\u2600 light';
+    try { localStorage.setItem('theme', theme); } catch (e) { /* ignore */ }
+    if (window.__redrawHeroCanvas) window.__redrawHeroCanvas();
+  }
+
+  let savedTheme = 'dark';
+  try { savedTheme = localStorage.getItem('theme') || 'dark'; } catch (e) { /* ignore */ }
+  applyTheme(savedTheme);
+
+  themeToggle.addEventListener('click', () => {
+    applyTheme(rootEl.dataset.theme === 'light' ? 'dark' : 'light');
+  });
+
   const navClockText = document.getElementById('navClockText');
   function tickClock(){
     const d = new Date();
