@@ -524,6 +524,1435 @@
   <canvas class="hero-canvas" id="heroCanvas" aria-hidden="true"></canvas>
   <div class="wrap hero-content">
     <p class="hero-eyebrow">ssh victor@skinderviken.it</p>
+    <h1 class="hero-name"><span id="heroNameText"></span><span class="cursor"></span></h1>
+    <p class="hero-role">Operation Technician @ Orange</p>
+    <p class="hero-desc">
+      Working at the intersection of operations, troubleshooting and infrastructure.
+      Started out at Reitan working across Azure, Intune and Windows Server,
+      now at Orange covering both Windows and Linux, security and monitoring —
+      and running a small homelab on the side.
+    </p>
+
+    <div class="uptime-row">
+      <div class="uptime-stat">
+        <div class="num" id="uptimeYears">–</div>
+        <div class="label">years in IT ops</div>
+      </div>
+      <div class="uptime-stat">
+        <div class="num">2</div>
+        <div class="label">Raspberry Pi 5s in prod</div>
+      </div>
+      <div class="uptime-stat">
+        <div class="num">1</div>
+        <div class="label">ThinkCentre incoming</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<section id="about" class="reveal">
+  <div class="wrap">
+    <p class="eyebrow">whoami</p>
+    <h2 class="section-title">About</h2>
+    <p class="about-body">
+      Who am i? I am <strong>Victor Skinderviken</strong>, a 24 year old IT professional.
+      I have my background in E-business and Information Technology, and have been working in IT operations for a little over a year now.
+      I have experience with both Windows and Linux environments, and have a strong focus on security and uptime.
+      I also run a small homelab on the side, where I experiment with different technologies and setups.
+      I also distro hop between different Linux distributions, and have a strong interest in the Linux ecosystem.
+    </p>
+  </div>
+</section>
+
+<section id="experience" class="reveal">
+  <div class="wrap">
+    <p class="eyebrow">journalctl --since "2025-07-01"</p>
+    <h2 class="section-title">Experience</h2>
+
+    <div class="timeline">
+      <div class="tl-item current">
+        <div class="tl-marker">●</div>
+        <div class="tl-meta">
+          <span>Jun 2026 → present</span>
+          <span class="tl-status">active</span>
+        </div>
+        <div class="tl-role">Operation Technician</div>
+        <div class="tl-company">Orange</div>
+        <div class="tl-desc">
+          Operations Technician. Operations and monitoring across a mixed
+          Windows/Linux environment, with a strong focus on security and uptime.
+          <ul>
+            <li>Monitoring systems and responding to alerts/incidents</li>
+            <li>Troubleshooting and escalating technical issues</li>
+            <li>Working across both Windows and Linux infrastructure</li>
+            <li>Contributing to security posture and monitoring coverage</li>
+          </ul>
+        </div>
+        <div class="tl-stack">
+          <span>Windows</span><span>Linux</span><span>Security</span><span>Monitoring</span>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-marker">○</div>
+        <div class="tl-meta">
+          <span>Jul 2025 → Jun 2026 · ~11 months</span>
+          <span class="tl-status">completed</span>
+        </div>
+        <div class="tl-role">IT Technician</div>
+        <div class="tl-company">Reitan</div>
+        <div class="tl-desc">
+          IT-Technician. My first job in IT — supporting and administering
+          cloud and on-prem infrastructure across a retail environment.
+          <ul>
+            <li>User and device management in Azure AD / Intune</li>
+            <li>Exchange administration and mail support</li>
+            <li>Windows Server and on-prem Active Directory</li>
+            <li>Handling support tickets and troubleshooting</li>
+          </ul>
+        </div>
+        <div class="tl-stack">
+          <span>Azure</span><span>Intune</span><span>Exchange</span><span>Windows Server</span><span>AD</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="linux" class="reveal">
+  <div class="wrap">
+    <p class="eyebrow">neofetch</p>
+    <h2 class="section-title">Linux &amp; homelab</h2>
+
+    <div class="neofetch-carousel" id="neofetchCarousel" tabindex="0" aria-label="System carousel, use arrow keys or buttons to navigate">
+      <button class="carousel-btn prev" id="carouselPrev" aria-label="Previous system">‹</button>
+      <button class="carousel-btn next" id="carouselNext" aria-label="Next system">›</button>
+
+      <div class="neofetch-viewport">
+        <div class="neofetch-track" id="neofetchTrack">
+
+          <!-- Slide 1: actual homelab -->
+          <div class="neofetch-slide">
+            <div class="term">
+              <div class="term-bar">
+                <span class="term-dot"></span><span class="term-dot"></span><span class="term-dot"></span>
+                <span class="term-title">homelab.conf</span>
+              </div>
+              <div class="term-body">
+                <div class="neofetch">
+                  <pre class="neofetch-ascii" style="color:#e95420; font-size:9px; line-height:1.15;">                             ....
+              .',:clooo:  .:looooo:.
+           .;looooooooc  .oooooooooo'
+        .;looooool:,''.  :ooooooooooc
+       ;looool;.         'oooooooooo,
+      ;clool'             .cooooooc.  ,,
+         ...                ......  .:oo,
+  .;clol:,.                        .loooo'
+ :ooooooooo,                        'ooool
+'ooooooooooo.                        loooo.
+'ooooooooool                         coooo.
+ ,loooooooc.                        .loooo.
+   .,;;;'.                          ;ooooc
+       ...                         ,ooool.
+    .cooooc.              ..',,'.  .cooo.
+      ;ooooo:.           ;oooooooc.  :l.
+       .coooooc,..      coooooooooo.
+         .:ooooooolc:. .ooooooooooo'
+           .':loooooo;  ,oooooooooc
+               ..';::c'  .;loooo:'</pre>
+                  <div class="neofetch-info">
+                    <div class="row"><span class="k">hosts</span><span class="v">2x Raspberry Pi 5</span></div>
+                    <div class="row"><span class="k">serving</span><span class="v">vicx.no</span></div>
+                    <div class="row"><span class="k">distro</span><span class="v">Ubuntu Server</span></div>
+                    <div class="row"><span class="k">orchestration</span><span class="v">MicroK8s</span></div>
+                    <div class="row"><span class="k">shell</span><span class="v">[bash / zsh]</span></div>
+                    <div class="row"><span class="k">incoming</span><span class="v" style="color:var(--accent-amber)">ThinkCentre M910q + Proxmox 📦</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2: Gentoo -->
+          <div class="neofetch-slide">
+            <div class="term">
+              <div class="term-bar">
+                <span class="term-dot"></span><span class="term-dot"></span><span class="term-dot"></span>
+                <span class="term-title">gentoo.conf</span>
+              </div>
+              <div class="term-body">
+                <div class="neofetch">
+                  <pre class="neofetch-ascii" style="color:#54487a; font-size:9px; line-height:1.15;">         -/oyddmdhs+:.
+     -odNMMMMMMMMNNmhy+-`
+   -yNMMMMMMMMMMMNNNmmdhy+-
+ `omMMMMMMMMMMMMNmdmmmmddhhy/`
+ omMMMMMMMMMMMNhhyyyohmdddhhhdo`
+.ydMMMMMMMMMMdhs++so/smdddhhhhdm+`
+ oyhdmNMMMMMMMNdyooydmddddhhhhyhNd.
+  :oyhhdNNMMMMMMMNNNmmdddhhhhhyymMh
+    .:+sydNMMMMMNNNmmmdddhhhhhhmMmy
+       /mMMMMMMNNNmmmdddhhhhhmMNhs:
+    `oNMMMMMMMNNNmmmddddhhdmMNhs+`
+  `sNMMMMMMMMNNNmmmdddddmNMmhs/.
+ /NMMMMMMMMNNNNmmmdddmNMNdso:`
++MMMMMMMNNNNNmmmmdmNMNdso/-
+yMMNNNNNNNmmmmmNNMmhs+/-`
+/hMMNNNNNNNNMNdhs++/-`
+`/ohdmmddhys+++/:.`
+  `-//////:--.</pre>
+                  <div class="neofetch-info">
+                    <div class="row"><span class="k">distro</span><span class="v">Gentoo Linux</span></div>
+                    <div class="row"><span class="k">init</span><span class="v">OpenRC</span></div>
+                    <div class="row"><span class="k">kernel</span><span class="v">[gentoo-sources, hand-configured]</span></div>
+                    <div class="row"><span class="k">package mgr</span><span class="v">Portage / emerge</span></div>
+                    <div class="row"><span class="k">shell</span><span class="v">zsh</span></div>
+                    <div class="row"><span class="k">status</span><span class="v" style="color:var(--accent-amber)">still compiling since 2019 😄</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3: Arch -->
+          <div class="neofetch-slide">
+            <div class="term">
+              <div class="term-bar">
+                <span class="term-dot"></span><span class="term-dot"></span><span class="term-dot"></span>
+                <span class="term-title">arch.conf</span>
+              </div>
+              <div class="term-body">
+                <div class="neofetch">
+                  <pre class="neofetch-ascii" style="color:#1793d1; font-size:9px; line-height:1.15;">                  -`
+                 .o+`
+                `ooo/
+               `+oooo:
+              `+oooooo:
+              -+oooooo+:
+            `/:-:++oooo+:
+           `/++++/+++++++:
+          `/++++++++++++++:
+         `/+++ooooooooooooo/`
+        ./ooosssso++osssssso+`
+       .oossssso-````/ossssss+`
+      -osssssso.      :ssssssso.
+     :osssssss/        osssso+++.
+    /ossssssss/        +ssssooo/-
+  `/ossssso+/:-        -:/+osssso+-
+ `+sso+:-`                 `.-/+oso:
+`++:.                           `-/+/
+.`                                 `/</pre>
+                  <div class="neofetch-info">
+                    <div class="row"><span class="k">distro</span><span class="v">Arch Linux</span></div>
+                    <div class="row"><span class="k">kernel</span><span class="v">linux-zen</span></div>
+                    <div class="row"><span class="k">wm</span><span class="v">Hyprland</span></div>
+                    <div class="row"><span class="k">package mgr</span><span class="v">pacman / yay</span></div>
+                    <div class="row"><span class="k">shell</span><span class="v">fish</span></div>
+                    <div class="row"><span class="k">status</span><span class="v" style="color:var(--accent-teal)">btw, I use Arch</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 4: NixOS -->
+          <div class="neofetch-slide">
+            <div class="term">
+              <div class="term-bar">
+                <span class="term-dot"></span><span class="term-dot"></span><span class="term-dot"></span>
+                <span class="term-title">nixos.conf</span>
+              </div>
+              <div class="term-body">
+                <div class="neofetch">
+                  <pre class="neofetch-ascii" style="color:#5277c3; font-size:8px; line-height:1.1;">          ▗▄▄▄       ▗▄▄▄▄    ▄▄▄▖
+          ▜███▙       ▜███▙  ▟███▛
+           ▜███▙       ▜███▙▟███▛
+            ▜███▙       ▜██████▛
+     ▟█████████████████▙ ▜████▛     ▟▙
+    ▟███████████████████▙ ▜███▙    ▟██▙
+           ▄▄▄▄▖           ▜███▙  ▟███▛
+          ▟███▛             ▜██▛ ▟███▛
+         ▟███▛               ▜▛ ▟███▛
+▟███████████▛                  ▟██████████▙
+▜██████████▛                  ▟███████████▛
+      ▟███▛ ▟▙               ▟███▛
+     ▟███▛ ▟██▙             ▟███▛
+    ▟███▛  ▜███▙           ▝▀▀▀▀
+    ▜██▛    ▜███▙ ▜██████████████████▛
+     ▜▛     ▟████▙ ▜████████████████▛
+           ▟██████▙         ▜███▙
+          ▟███▛▜███▙         ▜███▙
+         ▟███▛  ▜███▙         ▜███▙
+         ▝▀▀▀    ▀▀▀▀▘         ▀▀▀▘</pre>
+                  <div class="neofetch-info">
+                    <div class="row"><span class="k">distro</span><span class="v">NixOS</span></div>
+                    <div class="row"><span class="k">config</span><span class="v">flake.nix</span></div>
+                    <div class="row"><span class="k">package mgr</span><span class="v">Nix</span></div>
+                    <div class="row"><span class="k">rollback</span><span class="v">one command away</span></div>
+                    <div class="row"><span class="k">shell</span><span class="v">bash</span></div>
+                    <div class="row"><span class="k">status</span><span class="v" style="color:var(--accent-teal)">fully declarative, zero regrets</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="carousel-meta">
+        <div class="carousel-label" id="carouselLabel">Ubuntu homelab</div>
+        <div class="carousel-dots" id="carouselDots"></div>
+      </div>
+      <div class="carousel-hint">← → arrow keys, swipe, or click the dots</div>
+    </div>
+
+    <div class="homelab-note">
+      <strong>Homelab status:</strong> Two Raspberry Pi 5 units currently host
+      <a href="https://vicx.no" target="_blank" rel="noopener">vicx.no</a> on Ubuntu Server with
+      MicroK8s. A ThinkCentre M910q is on its way and will run Proxmox as the new home server —
+      this site (skinderviken.it) runs on Vercel for now, with a move to self-hosting planned once
+      the ThinkCentre is up and running. [Add a bit about what you plan to run on it —
+      self-hosted services, homelab experiments, specific tools you're excited to set up, etc.]
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="reveal">
+  <div class="wrap">
+    <p class="eyebrow">ls -la ./projects</p>
+    <h2 class="section-title">Projects</h2>
+
+    <div class="projects-grid">
+      <div class="project-card">
+        <span class="project-tag">Replaced</span>
+        <h3>vicx.no (NGINX)</h3>
+        <p>My first self-hosted website, deployed using NGINX on a Raspberry Pi. This was a single Raspberry Pi 5 setup running Debian. Later replaced by the dual Raspberry Pi 5 setup running Ubuntu Server and MicroK8s.</p>
+        <a class="visit" href="https://vicx.no" target="_blank" rel="noopener">Visit →</a>
+      </div>
+      <div class="project-card">
+        <span class="project-tag live">live</span>
+        <h3>vicx.no (MicroK8s)</h3>
+        <p>Personal site/project hosted on a pair of self-managed Raspberry Pi 5 units. These are running Ubuntu Server, orchestrated with MicroK8s Kubernetes. This is the current setup for my self-hosted website.</p>
+      </div>
+      <div class="project-card">
+        <span class="project-tag live">live</span>
+        <h3>skinderviken.it (Proxmox)</h3>
+        <p>This is the next step, and the site you're currently browsing. It's hosted on a Proxmox virtualization platform, running on a ThinkCentre M910q.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="education" class="reveal">
+  <div class="wrap">
+    <p class="eyebrow">cat education.log</p>
+    <h2 class="section-title">Education</h2>
+
+    <div class="edu-item">
+      <div class="edu-school">Kristiania</div>
+      <div class="edu-meta">2022–2025 · E-business - Information Technology</div>
+      <div class="edu-desc">When studying E-business and Information Technology at Kristiania, I gained a strong foundation in both the theoretical and practical aspects of the field.
+        We learned how to debug, style, and deploy web applications using modern technologies.
+        I learned different coding languages and frameworks, such as
+        JavaScript, Java, Python, MySQL, HTML, and CSS. As well as fundamental concepts in database management and network administration.</div>
+    </div>
+  </div>
+</section>
+
+<section id="shell" class="reveal">
+  <div class="wrap">
+    <p class="eyebrow">/bin/sh</p>
+    <h2 class="section-title">Poke around</h2>
+    <div class="term shell-term">
+      <div class="term-bar">
+        <span class="term-dot"></span><span class="term-dot"></span><span class="term-dot"></span>
+        <span class="term-title">visitor@skinderviken:~</span>
+      </div>
+      <div class="term-body">
+        <div class="shell-output" id="shellOutput">
+          <p class="shell-line out">Welcome. This is a real (tiny) shell — type a command and press enter.</p>
+          <p class="shell-line out">Type 'help' to see what's available.</p>
+        </div>
+        <div class="shell-inputrow">
+          <span class="shell-prompt">visitor@skinderviken:~$</span>
+          <input type="text" class="shell-input" id="shellInput" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Type a command">
+        </div>
+      </div>
+    </div>
+    <p class="shell-help-hint">try <code>help</code>, <code>cd projects</code>, <code>ls linux</code>, <code>cat about.txt</code>, <code>neofetch</code>, or <code>sudo rm -rf /</code> if you're feeling brave</p>
+  </div>
+</section>
+
+<section id="contact" class="reveal">
+  <div class="wrap">
+    <p class="eyebrow">contact --send</p>
+    <h2 class="section-title">Contact</h2>
+    <div class="contact-grid">
+      <a class="contact-link" href="mailto:vicdal66@gmail.com" id="emailLink"><span class="dot"></span>Email<span class="copied-toast" id="copiedToast">copied!</span></a>
+      <a class="contact-link" href="https://github.com/VictorSkinderviken" target="_blank" rel="noopener"><span class="dot"></span>GitHub</a>
+      <a class="contact-link" href="https://www.linkedin.com/in/victorskinderviken" target="_blank" rel="noopener"><span class="dot"></span>LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  skinderviken.it all rights reserved © 2026
+</footer>
+
+<script>
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // The hero name is actually editable — press backspace to delete it,
+  // type to write something random in its place. Refresh the page to reset it.
+  (function editableHeroName(){
+    const nameEl = document.getElementById('heroNameText');
+    const FULL_NAME = 'Victor Skinderviken';
+    const MAX_LEN = 40;
+    let current = FULL_NAME;
+
+    nameEl.textContent = current;
+
+    document.addEventListener('keydown', (e) => {
+      const active = document.activeElement;
+      const isTyping = active && (active.tagName === 'INPUT' || active.tagName === 'TEXTAREA' || active.isContentEditable);
+      if (isTyping || e.ctrlKey || e.metaKey || e.altKey) return;
+      if (e.key === '/') return; // reserved for quick search
+
+      if (e.key === 'Backspace'){
+        e.preventDefault();
+        current = current.slice(0, -1);
+        nameEl.textContent = current;
+      } else if (e.key.length === 1 && current.length < MAX_LEN){
+        e.preventDefault();
+        current += e.key;
+        nameEl.textContent = current;
+      }
+    });
+  })();
+
+  // Ambient network graph animation in the hero background
+  (function initHeroCanvas(){
+    const canvas = document.getElementById('heroCanvas');
+    const ctx = canvas.getContext('2d');
+    const hero = canvas.closest('header.hero');
+    let width, height, dpr, nodes = [], packets = [];
+    const NODE_COUNT = 42;
+    const MAX_DIST = 130;
+    const PALETTE = {
+      dark: { teal: '79,209,197', amber: '245,166,35', lineAlpha: 0.3, nodeAlpha: 0.55 },
+      light: { teal: '14,143,131', amber: '180,89,12', lineAlpha: 0.28, nodeAlpha: 0.6 },
+    };
+    function colors(){
+      return document.documentElement.dataset.theme === 'light' ? PALETTE.light : PALETTE.dark;
+    }
+
+    function resize(){
+      const rect = hero.getBoundingClientRect();
+      dpr = window.devicePixelRatio || 1;
+      width = rect.width; height = rect.height;
+      canvas.width = width * dpr; canvas.height = height * dpr;
+      canvas.style.width = width + 'px'; canvas.style.height = height + 'px';
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
+
+    function makeNodes(){
+      nodes = Array.from({ length: NODE_COUNT }, () => ({
+        x: Math.random() * width,
+        y: Math.random() * height,
+        vx: (Math.random() - 0.5) * 0.22,
+        vy: (Math.random() - 0.5) * 0.22,
+      }));
+    }
+
+    resize();
+    makeNodes();
+    window.addEventListener('resize', () => { resize(); makeNodes(); });
+
+    function draw(){
+      ctx.clearRect(0, 0, width, height);
+      const { teal: TEAL, amber: AMBER, lineAlpha, nodeAlpha } = colors();
+      const edges = [];
+
+      if (!reduceMotion){
+        nodes.forEach(n => {
+          n.x += n.vx; n.y += n.vy;
+          if (n.x < 0 || n.x > width) n.vx *= -1;
+          if (n.y < 0 || n.y > height) n.vy *= -1;
+        });
+      }
+
+      for (let i = 0; i < nodes.length; i++){
+        for (let j = i + 1; j < nodes.length; j++){
+          const dx = nodes[i].x - nodes[j].x, dy = nodes[i].y - nodes[j].y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < MAX_DIST){
+            const alpha = (1 - dist / MAX_DIST) * lineAlpha;
+            ctx.strokeStyle = `rgba(${TEAL},${alpha})`;
+            ctx.lineWidth = 1;
+            ctx.beginPath();
+            ctx.moveTo(nodes[i].x, nodes[i].y);
+            ctx.lineTo(nodes[j].x, nodes[j].y);
+            ctx.stroke();
+            edges.push({ a: nodes[i], b: nodes[j] });
+          }
+        }
+      }
+
+      if (!reduceMotion && edges.length && Math.random() < 0.012){
+        const e = edges[Math.floor(Math.random() * edges.length)];
+        packets.push({ a: e.a, b: e.b, t: 0, color: Math.random() < 0.7 ? TEAL : AMBER });
+      }
+
+      packets.forEach(p => {
+        p.t += 0.018;
+        const x = p.a.x + (p.b.x - p.a.x) * p.t;
+        const y = p.a.y + (p.b.y - p.a.y) * p.t;
+        ctx.fillStyle = `rgba(${p.color},0.9)`;
+        ctx.beginPath();
+        ctx.arc(x, y, 2, 0, Math.PI * 2);
+        ctx.fill();
+      });
+      packets = packets.filter(p => p.t < 1);
+
+      nodes.forEach(n => {
+        ctx.fillStyle = `rgba(${TEAL},${nodeAlpha})`;
+        ctx.beginPath();
+        ctx.arc(n.x, n.y, 1.6, 0, Math.PI * 2);
+        ctx.fill();
+      });
+    }
+
+    if (reduceMotion){
+      draw();
+      window.__redrawHeroCanvas = draw;
+    } else {
+      (function loop(){ draw(); requestAnimationFrame(loop); })();
+    }
+  })();
+
+
+  // Uptime counter — years since starting in IT (Jul 2025 at Reitan)
+  const STARTED = new Date("2025-07-01");
+  const now = new Date();
+  let years = now.getFullYear() - STARTED.getFullYear();
+  const hasHadAnniversary = (now.getMonth() > STARTED.getMonth()) ||
+    (now.getMonth() === STARTED.getMonth() && now.getDate() >= STARTED.getDate());
+  if (!hasHadAnniversary) years -= 1;
+  document.getElementById('uptimeYears').textContent = Math.max(years, 0) + "+";
+
+  // Live nav clock
+  // Light / dark theme toggle
+  const themeToggle = document.getElementById('themeToggle');
+  const rootEl = document.documentElement;
+
+  function applyTheme(theme){
+    rootEl.dataset.theme = theme;
+    themeToggle.textContent = theme === 'light' ? '\u263D dark' : '\u2600 light';
+    try { localStorage.setItem('theme', theme); } catch (e) { /* ignore */ }
+    if (window.__redrawHeroCanvas) window.__redrawHeroCanvas();
+  }
+
+  let savedTheme = 'dark';
+  try { savedTheme = localStorage.getItem('theme') || 'dark'; } catch (e) { /* ignore */ }
+  applyTheme(savedTheme);
+
+  themeToggle.addEventListener('click', () => {
+    applyTheme(rootEl.dataset.theme === 'light' ? 'dark' : 'light');
+  });
+
+  const navClockText = document.getElementById('navClockText');
+  function tickClock(){
+    const d = new Date();
+    navClockText.textContent = d.toLocaleTimeString([], { hour12: false });
+  }
+  tickClock();
+  setInterval(tickClock, 1000);
+
+  // Neofetch carousel
+  const neofetchLabels = ["Ubuntu homelab", "Gentoo", "Arch Linux", "NixOS"];
+  const track = document.getElementById('neofetchTrack');
+  const dotsWrap = document.getElementById('carouselDots');
+  const label = document.getElementById('carouselLabel');
+  const prevBtn = document.getElementById('carouselPrev');
+  const nextBtn = document.getElementById('carouselNext');
+  const carousel = document.getElementById('neofetchCarousel');
+  let slideIndex = 0;
+
+  neofetchLabels.forEach((name, i) => {
+    const dot = document.createElement('button');
+    dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+    dot.setAttribute('aria-label', 'Go to ' + name);
+    dot.addEventListener('click', () => { goToSlide(i); if (typeof restartAutoplay === 'function') restartAutoplay(); });
+    dotsWrap.appendChild(dot);
+  });
+
+  function goToSlide(i){
+    slideIndex = (i + neofetchLabels.length) % neofetchLabels.length;
+    track.style.transform = 'translateX(-' + (slideIndex * 100) + '%)';
+    label.textContent = neofetchLabels[slideIndex];
+    [...dotsWrap.children].forEach((d, idx) => d.classList.toggle('active', idx === slideIndex));
+  }
+
+  prevBtn.addEventListener('click', () => { goToSlide(slideIndex - 1); restartAutoplay(); });
+  nextBtn.addEventListener('click', () => { goToSlide(slideIndex + 1); restartAutoplay(); });
+
+  // Auto-scroll through the systems, pausing on hover/focus/touch
+  let autoplayTimer = null;
+  const AUTOPLAY_DELAY = 4500;
+
+  function startAutoplay(){
+    if (reduceMotion) return;
+    stopAutoplay();
+    autoplayTimer = setInterval(() => goToSlide(slideIndex + 1), AUTOPLAY_DELAY);
+  }
+  function stopAutoplay(){
+    if (autoplayTimer){ clearInterval(autoplayTimer); autoplayTimer = null; }
+  }
+  function restartAutoplay(){ startAutoplay(); }
+
+  carousel.addEventListener('mouseenter', stopAutoplay);
+  carousel.addEventListener('mouseleave', startAutoplay);
+  carousel.addEventListener('focusin', stopAutoplay);
+  carousel.addEventListener('focusout', startAutoplay);
+  carousel.addEventListener('touchstart', stopAutoplay, { passive: true });
+
+  startAutoplay();
+
+  // Keyboard navigation for carousel
+  carousel.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft'){ e.preventDefault(); goToSlide(slideIndex - 1); restartAutoplay(); }
+    if (e.key === 'ArrowRight'){ e.preventDefault(); goToSlide(slideIndex + 1); restartAutoplay(); }
+  });
+
+  // Touch swipe for carousel
+  let touchStartX = null;
+  const viewport = carousel.querySelector('.neofetch-viewport');
+  viewport.addEventListener('touchstart', (e) => { touchStartX = e.touches[0].clientX; }, { passive: true });
+  viewport.addEventListener('touchend', (e) => {
+    if (touchStartX === null) return;
+    const dx = e.changedTouches[0].clientX - touchStartX;
+    if (Math.abs(dx) > 40){ dx > 0 ? goToSlide(slideIndex - 1) : goToSlide(slideIndex + 1); restartAutoplay(); }
+    touchStartX = null;
+  });
+
+  // Scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window && !reduceMotion) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting){
+          entry.target.classList.add('in-view');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => io.observe(el));
+  } else {
+    revealEls.forEach(el => el.classList.add('in-view'));
+  }
+
+  // Copy email to clipboard
+  const emailLink = document.getElementById('emailLink');
+  const copiedToast = document.getElementById('copiedToast');
+  emailLink.addEventListener('click', (e) => {
+    if (navigator.clipboard) {
+      e.preventDefault();
+      navigator.clipboard.writeText('vicdal66@gmail.com').then(() => {
+        copiedToast.classList.add('show');
+        setTimeout(() => copiedToast.classList.remove('show'), 1500);
+      }).catch(() => { window.location.href = 'mailto:vicdal66@gmail.com'; });
+    }
+  });
+
+  // Interactive shell
+  const shellOutput = document.getElementById('shellOutput');
+  const shellInput = document.getElementById('shellInput');
+  const shellHistory = [];
+  let historyPos = -1;
+
+  function printLine(text, cls){
+    const p = document.createElement('p');
+    p.className = 'shell-line ' + cls;
+    p.textContent = text;
+    shellOutput.appendChild(p);
+    shellOutput.scrollTop = shellOutput.scrollHeight;
+  }
+
+  const sectionMap = {
+    about: '#about', bio: '#about', whoami: '#about',
+    experience: '#experience', work: '#experience', jobs: '#experience', job: '#experience',
+    linux: '#linux', homelab: '#linux',
+    projects: '#projects', project: '#projects',
+    education: '#education', school: '#education',
+    contact: '#contact',
+  };
+
+  function jumpTo(name){
+    const key = (name || '').toLowerCase().replace(/\.(txt|md)$/, '').replace(/^\.?\//, '');
+    const sel = sectionMap[key];
+    if (!sel) return false;
+    document.querySelector(sel).scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
+    return true;
+  }
+
+  function runCommand(raw){
+    const cmd = raw.trim();
+    printLine(cmd, 'cmd');
+    if (cmd === '') return;
+
+    const [name, ...args] = cmd.split(/\s+/);
+    const arg = args.join(' ');
+
+    switch(name.toLowerCase()){
+      case 'help':
+        printLine('available commands:', 'out');
+        printLine('  help        show this list', 'out');
+        printLine('  whoami      who is browsing right now', 'out');
+        printLine('  neofetch    quick system summary', 'out');
+        printLine('  ls          list sections on this page', 'out');
+        printLine('  cd <section>    jump to a section (about, experience, linux, projects, education, contact)', 'out');
+        printLine('  cat about.txt   read a short bio (and jump there)', 'out');
+        printLine('  contact     how to reach Victor', 'out');
+        printLine('  date        current date and time', 'out');
+        printLine('  clear       clear this terminal', 'out');
+        break;
+      case 'whoami':
+        printLine('guest — poking around Victor\'s portfolio. hi 👋', 'out');
+        break;
+      case 'neofetch':
+        printLine('victor@skinderviken.it', 'out');
+        printLine('-----------------------', 'out');
+        printLine('OS: skinderviken.it (Vercel, for now)', 'out');
+        printLine('Role: Operation Technician @ Orange', 'out');
+        printLine('Homelab: 2x Raspberry Pi 5 + 1x ThinkCentre incoming', 'out');
+        printLine('Interests: Linux, homelabs, distro hopping', 'out');
+        break;
+      case 'ls':
+        if (arg){
+          if (jumpTo(arg)){ printLine('→ jumping to ' + arg, 'out'); }
+          else { printLine('ls: cannot access \'' + arg + '\': No such file or directory', 'err'); }
+        } else {
+          printLine('about  experience  linux  projects  education  contact', 'out');
+        }
+        break;
+      case 'cd':
+        if (!arg){
+          printLine('usage: cd <section>  (about, experience, linux, projects, education, contact)', 'out');
+        } else if (jumpTo(arg)){
+          printLine('→ jumping to ' + arg, 'out');
+        } else {
+          printLine('cd: ' + arg + ': No such directory', 'err');
+        }
+        break;
+      case 'open':
+        if (!arg){ printLine('usage: open <section>', 'out'); }
+        else if (jumpTo(arg)){ printLine('→ jumping to ' + arg, 'out'); }
+        else { printLine('open: ' + arg + ': No such section', 'err'); }
+        break;
+      case 'cat':
+        if (!arg){
+          printLine('usage: cat <file>', 'out');
+        } else {
+          const clean = arg.replace(/\.(txt|md)$/, '');
+          if (clean === 'about'){
+            printLine('24yo IT professional. E-business & IT background.', 'out');
+            printLine('IT Technician @ Reitan -> Operation Technician @ Orange.', 'out');
+            printLine('Runs a homelab, distro-hops for fun.', 'out');
+            jumpTo('about');
+          } else if (jumpTo(clean)){
+            printLine('→ jumping to ' + clean, 'out');
+          } else {
+            printLine('cat: ' + arg + ': No such file or directory', 'err');
+          }
+        }
+        break;
+      case 'contact':
+        printLine('email: vicdal66@gmail.com', 'out');
+        printLine('github: github.com/VictorSkinderviken', 'out');
+        printLine('linkedin: linkedin.com/in/victorskinderviken', 'out');
+        break;
+      case 'date':
+        printLine(new Date().toString(), 'out');
+        break;
+      case 'pwd':
+        printLine('/home/visitor', 'out');
+        break;
+      case 'clear':
+        shellOutput.innerHTML = '';
+        break;
+      case 'sudo':
+        printLine('Nice try. This incident has been reported to /dev/null.', 'err');
+        break;
+      case 'exit':
+        printLine('nice try, this tab stays open', 'err');
+        break;
+      default:
+        printLine(name + ': command not found — try \'help\'', 'err');
+    }
+  }
+
+  shellInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter'){
+      const val = shellInput.value;
+      if (val.trim() !== ''){
+        shellHistory.push(val);
+        historyPos = shellHistory.length;
+      }
+      runCommand(val);
+      shellInput.value = '';
+    } else if (e.key === 'ArrowUp'){
+      if (shellHistory.length === 0) return;
+      e.preventDefault();
+      historyPos = Math.max(0, historyPos - 1);
+      shellInput.value = shellHistory[historyPos] || '';
+    } else if (e.key === 'ArrowDown'){
+      if (shellHistory.length === 0) return;
+      e.preventDefault();
+      historyPos = Math.min(shellHistory.length, historyPos + 1);
+      shellInput.value = shellHistory[historyPos] || '';
+    }
+  });
+
+  document.querySelector('.shell-term').addEventListener('click', () => shellInput.focus());
+
+  // Command palette (Ctrl+K / Cmd+K / "/")
+  const cmdkOverlay = document.getElementById('cmdkOverlay');
+  const cmdkInput = document.getElementById('cmdkInput');
+  const cmdkListEl = document.getElementById('cmdkList');
+  const openSearchBtn = document.getElementById('openSearch');
+
+  const cmdkCommands = [
+    { label: 'About', hint: 'section', action: () => jumpTo('about') },
+    { label: 'Experience', hint: 'section', action: () => jumpTo('experience') },
+    { label: 'Linux & homelab', hint: 'section', action: () => jumpTo('linux') },
+    { label: 'Projects', hint: 'section', action: () => jumpTo('projects') },
+    { label: 'Education', hint: 'section', action: () => jumpTo('education') },
+    { label: 'Contact', hint: 'section', action: () => jumpTo('contact') },
+    { label: 'Poke around (terminal)', hint: 'section', action: () => document.querySelector('#shell').scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' }) },
+    { label: 'Open GitHub', hint: '↗ github.com', action: () => window.open('https://github.com/VictorSkinderviken', '_blank') },
+    { label: 'Open LinkedIn', hint: '↗ linkedin.com', action: () => window.open('https://www.linkedin.com/in/victorskinderviken', '_blank') },
+    { label: 'Visit vicx.no', hint: '↗ live project', action: () => window.open('https://vicx.no', '_blank') },
+    { label: 'Copy email', hint: 'vicdal66@gmail.com', action: () => { if (navigator.clipboard) navigator.clipboard.writeText('vicdal66@gmail.com'); } },
+  ];
+
+  let cmdkFiltered = cmdkCommands;
+  let cmdkSelected = 0;
+
+  function renderCmdkList(){
+    cmdkListEl.innerHTML = '';
+    if (!cmdkFiltered.length){
+      const li = document.createElement('li');
+      li.className = 'cmdk-empty';
+      li.textContent = 'No matches — try another term';
+      cmdkListEl.appendChild(li);
+      return;
+    }
+    cmdkFiltered.forEach((c, i) => {
+      const li = document.createElement('li');
+      li.className = 'cmdk-item' + (i === cmdkSelected ? ' active' : '');
+      const labelSpan = document.createElement('span');
+      labelSpan.className = 'cmdk-label';
+      labelSpan.textContent = c.label;
+      const hintSpan = document.createElement('span');
+      hintSpan.className = 'cmdk-hint';
+      hintSpan.textContent = c.hint;
+      li.appendChild(labelSpan);
+      li.appendChild(hintSpan);
+      li.addEventListener('mouseenter', () => { cmdkSelected = i; renderCmdkList(); });
+      li.addEventListener('click', () => runCmdkSelection(c));
+      cmdkListEl.appendChild(li);
+    });
+  }
+
+  function runCmdkSelection(c){
+    closeCmdk();
+    c.action();
+  }
+
+  function openCmdk(){
+    cmdkOverlay.hidden = false;
+    requestAnimationFrame(() => cmdkOverlay.classList.add('open'));
+    cmdkInput.value = '';
+    cmdkFiltered = cmdkCommands;
+    cmdkSelected = 0;
+    renderCmdkList();
+    cmdkInput.focus();
+  }
+
+  function closeCmdk(){
+    cmdkOverlay.classList.remove('open');
+    setTimeout(() => { cmdkOverlay.hidden = true; }, reduceMotion ? 0 : 150);
+    openSearchBtn.focus();
+  }
+
+  cmdkInput.addEventListener('input', () => {
+    const q = cmdkInput.value.toLowerCase().trim();
+    cmdkFiltered = q ? cmdkCommands.filter(c => c.label.toLowerCase().includes(q)) : cmdkCommands;
+    cmdkSelected = 0;
+    renderCmdkList();
+  });
+
+  cmdkInput.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowDown'){
+      e.preventDefault();
+      cmdkSelected = Math.min(cmdkFiltered.length - 1, cmdkSelected + 1);
+      renderCmdkList();
+    } else if (e.key === 'ArrowUp'){
+      e.preventDefault();
+      cmdkSelected = Math.max(0, cmdkSelected - 1);
+      renderCmdkList();
+    } else if (e.key === 'Enter'){
+      e.preventDefault();
+      if (cmdkFiltered[cmdkSelected]) runCmdkSelection(cmdkFiltered[cmdkSelected]);
+    } else if (e.key === 'Escape'){
+      closeCmdk();
+    }
+  });
+
+  openSearchBtn.addEventListener('click', openCmdk);
+  cmdkOverlay.addEventListener('click', (e) => { if (e.target === cmdkOverlay) closeCmdk(); });
+
+  document.addEventListener('keydown', (e) => {
+    const active = document.activeElement;
+    const isTyping = active && (active.tagName === 'INPUT' || active.tagName === 'TEXTAREA');
+    if ((e.key === 'k' || e.key === 'K') && (e.metaKey || e.ctrlKey)){
+      e.preventDefault();
+      openCmdk();
+    } else if (e.key === '/' && !isTyping){
+      e.preventDefault();
+      openCmdk();
+    }
+  });
+</script>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Victor Skinderviken — Operation Technician</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #0a0e12;
+    --bg-panel: #10151b;
+    --bg-panel-raised: #161d25;
+    --border: #232c35;
+    --text-primary: #e8eef3;
+    --text-muted: #8a97a3;
+    --text-dim: #55626d;
+    --accent-teal: #4fd1c5;
+    --accent-amber: #f5a623;
+    --nav-bg: rgba(10,14,18,0.85);
+    --shadow-color: rgba(0,0,0,0.65);
+    --selection-text: #062522;
+    --mono: 'JetBrains Mono', monospace;
+    --sans: 'IBM Plex Sans', sans-serif;
+  }
+
+  :root[data-theme="light"]{
+    --bg: #f5f7f9;
+    --bg-panel: #ffffff;
+    --bg-panel-raised: #edf1f4;
+    --border: #d7dee4;
+    --text-primary: #12181f;
+    --text-muted: #4c5a68;
+    --text-dim: #7c8794;
+    --accent-teal: #0e8f83;
+    --accent-amber: #b4590c;
+    --nav-bg: rgba(245,247,249,0.85);
+    --shadow-color: rgba(15,23,31,0.14);
+    --selection-text: #f2fbf9;
+  }
+
+  *{ box-sizing: border-box; }
+  html{ scroll-behavior: smooth; }
+  body{
+    margin:0;
+    background: var(--bg);
+    color: var(--text-primary);
+    font-family: var(--sans);
+    line-height: 1.6;
+    transition: background-color .25s ease, color .25s ease;
+  }
+  ::selection{ background: var(--accent-teal); color: var(--selection-text); }
+
+  a{ color: var(--accent-teal); text-decoration: none; }
+  a:hover{ text-decoration: underline; }
+
+  :focus-visible{
+    outline: 2px solid var(--accent-teal);
+    outline-offset: 3px;
+  }
+
+  .wrap{
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* ---------- NAV ---------- */
+  nav{
+    position: sticky; top:0; z-index: 50;
+    background: var(--nav-bg);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+  }
+  nav .wrap{
+    display:flex; align-items:center; justify-content:space-between;
+    height: 56px;
+  }
+  .nav-left{ display:flex; align-items:center; gap: 14px; }
+  .nav-logo{
+    font-family: var(--mono); font-size: 14px; color: var(--text-primary);
+  }
+  .nav-logo span{ color: var(--accent-teal); }
+  .nav-clock{
+    font-family: var(--mono); font-size: 12px; color: var(--text-dim);
+    border-left: 1px solid var(--border); padding-left: 14px;
+  }
+  .nav-clock .dot{
+    display:inline-block; width:6px; height:6px; border-radius:50%;
+    background: var(--accent-teal); margin-right:6px;
+    animation: pulse 2s ease-in-out infinite;
+  }
+  @keyframes pulse{ 0%,100%{ opacity:1; } 50%{ opacity:0.3; } }
+  @media (prefers-reduced-motion: reduce){ .nav-clock .dot{ animation:none; } }
+  .nav-links{ display:flex; gap: 22px; list-style:none; margin:0; padding:0; }
+  .nav-links a{
+    color: var(--text-muted); font-family: var(--mono); font-size: 13px;
+  }
+  .nav-links a:hover{ color: var(--accent-teal); text-decoration:none; }
+  @media (max-width: 700px){
+    .nav-clock{ display:none; }
+  }
+  .nav-search-btn{
+    font-family: var(--mono); font-size: 11.5px; color: var(--text-dim);
+    background: var(--bg-panel-raised); border: 1px solid var(--border); border-radius: 6px;
+    padding: 5px 10px; display:flex; align-items:center; gap:7px; cursor:pointer;
+    transition: border-color .15s ease, color .15s ease;
+  }
+  .nav-search-btn:hover{ border-color: var(--accent-teal); color: var(--accent-teal); }
+  .nav-search-btn kbd{
+    font-family: var(--mono); font-size: 10px; color: var(--text-dim);
+    background: var(--bg); border: 1px solid var(--border); border-radius: 4px; padding: 1px 5px;
+  }
+  @media (max-width: 600px){
+    .nav-search-btn kbd{ display:none; }
+  }
+
+  /* ---------- COMMAND PALETTE ---------- */
+  .cmdk-overlay{
+    position: fixed; inset: 0; z-index: 200;
+    background: rgba(6,9,12,0.6); backdrop-filter: blur(3px);
+    display:flex; align-items:flex-start; justify-content:center;
+    padding-top: 12vh;
+    opacity: 0; transition: opacity .15s ease;
+  }
+  .cmdk-overlay[hidden]{ display:none; }
+  .cmdk-overlay.open{ opacity: 1; }
+  .cmdk-modal{
+    width: min(560px, 90vw);
+    background: var(--bg-panel); border: 1px solid var(--border); border-radius: 10px;
+    box-shadow: 0 30px 80px -20px var(--shadow-color);
+    overflow: hidden;
+    transform: translateY(-8px);
+    transition: transform .15s ease;
+  }
+  .cmdk-overlay.open .cmdk-modal{ transform: translateY(0); }
+  @media (prefers-reduced-motion: reduce){
+    .cmdk-overlay, .cmdk-modal{ transition: none; }
+  }
+  .cmdk-inputrow{
+    display:flex; align-items:center; gap: 10px;
+    padding: 14px 16px; border-bottom: 1px solid var(--border);
+  }
+  .cmdk-inputrow .prompt{ color: var(--accent-teal); font-family: var(--mono); font-size: 16px; }
+  .cmdk-input{
+    flex:1; background: none; border:none; outline:none;
+    color: var(--text-primary); font-family: var(--mono); font-size: 15px;
+    caret-color: var(--accent-teal);
+  }
+  .cmdk-list{ list-style:none; margin:0; padding: 6px; max-height: 320px; overflow-y:auto; }
+  .cmdk-item{
+    display:flex; justify-content:space-between; align-items:center; gap: 10px;
+    padding: 9px 10px; border-radius: 6px; cursor:pointer;
+    font-family: var(--mono); font-size: 13.5px; color: var(--text-muted);
+  }
+  .cmdk-item .cmdk-label{ color: var(--text-primary); }
+  .cmdk-item .cmdk-hint{ color: var(--text-dim); font-size: 11.5px; white-space:nowrap; }
+  .cmdk-item.active{ background: var(--bg-panel-raised); }
+  .cmdk-item.active .cmdk-label{ color: var(--accent-teal); }
+  .cmdk-empty{ padding: 16px 10px; color: var(--text-dim); font-family: var(--mono); font-size: 13px; }
+  .cmdk-footer{
+    display:flex; gap: 16px; padding: 9px 16px; border-top: 1px solid var(--border);
+    font-family: var(--mono); font-size: 10.5px; color: var(--text-dim);
+  }
+  .cmdk-footer kbd{
+    background: var(--bg-panel-raised); border: 1px solid var(--border); border-radius: 4px;
+    padding: 0 5px; margin-right: 2px;
+  }
+
+  @media (max-width: 600px){
+    .nav-links{ gap: 12px; }
+    .nav-links a{ font-size: 11px; }
+  }
+
+  /* ---------- SCROLL REVEAL ---------- */
+  .reveal{
+    opacity: 0; transform: translateY(14px);
+    transition: opacity .6s ease, transform .6s ease;
+  }
+  .reveal.in-view{ opacity: 1; transform: translateY(0); }
+  @media (prefers-reduced-motion: reduce){
+    .reveal{ opacity:1; transform:none; transition:none; }
+  }
+
+  /* ---------- TERMINAL WINDOW CHROME ---------- */
+  .term{
+    background: var(--bg-panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px -20px var(--shadow-color);
+  }
+  .term-bar{
+    display:flex; align-items:center; gap:8px;
+    padding: 10px 14px;
+    background: var(--bg-panel-raised);
+    border-bottom: 1px solid var(--border);
+    font-family: var(--mono); font-size: 12px; color: var(--text-dim);
+  }
+  .term-dot{ width:10px; height:10px; border-radius:50%; background:#3a4550; transition: background .15s ease; }
+  .term-bar:hover .term-dot:nth-child(1){ background:#ff5f57; }
+  .term-bar:hover .term-dot:nth-child(2){ background:#febc2e; }
+  .term-bar:hover .term-dot:nth-child(3){ background:#28c840; }
+  .term-title{ margin-left: 6px; }
+  .term-body{
+    padding: 20px 22px;
+    font-family: var(--mono);
+    font-size: 13.5px;
+    color: var(--text-muted);
+    white-space: pre-wrap;
+  }
+
+  /* ---------- HERO ---------- */
+  header.hero{
+    padding: 72px 0 44px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-canvas{
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    display: block;
+    opacity: 0.7;
+    pointer-events: none;
+  }
+  .hero-content{ position: relative; z-index: 1; }
+  .hero-eyebrow{
+    font-family: var(--mono); font-size: 12.5px; color: var(--text-dim);
+    margin: 0; letter-spacing: 0.02em;
+  }
+  .hero-eyebrow::before{ content: "$ "; color: var(--accent-teal); }
+
+  .hero-name{
+    font-family: var(--mono);
+    font-size: clamp(32px, 6vw, 52px);
+    font-weight: 700;
+    margin: 14px 0 4px;
+    letter-spacing: -0.02em;
+  }
+  .hero-role{
+    font-family: var(--mono);
+    color: var(--accent-teal);
+    font-size: clamp(14px, 2vw, 17px);
+    margin: 0 0 18px;
+  }
+  .hero-role::before{ content: "> "; color: var(--text-dim); }
+  .hero-desc{
+    max-width: 560px;
+    color: var(--text-muted);
+    font-size: 16px;
+  }
+  .cursor{
+    display:inline-block; width:9px; height:1.1em; background:var(--accent-teal);
+    vertical-align: text-bottom; animation: blink 1s step-end infinite;
+  }
+  @media (prefers-reduced-motion: reduce){
+    .cursor{ animation: none; }
+  }
+  @keyframes blink{ 50%{ opacity:0; } }
+
+  .uptime-row{
+    display:flex; gap: 28px; flex-wrap:wrap;
+    margin-top: 30px;
+    font-family: var(--mono);
+  }
+  .uptime-stat .num{ font-size: 22px; color: var(--text-primary); font-weight:700; }
+  .uptime-stat .label{ font-size: 11px; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.06em; }
+
+
+  /* ---------- SECTION GENERIC ---------- */
+  section{ padding: 56px 0; border-top: 1px solid var(--border); }
+  .eyebrow{
+    font-family: var(--mono); font-size: 12px; color: var(--accent-amber);
+    text-transform: uppercase; letter-spacing: 0.08em; margin: 0 0 10px;
+  }
+  .eyebrow::before{ content: "# "; color: var(--text-dim); }
+  h2.section-title{
+    font-family: var(--mono);
+    font-size: clamp(22px, 3.4vw, 30px);
+    margin: 0 0 26px;
+    font-weight: 700;
+  }
+
+  /* ---------- ABOUT ---------- */
+  .about-body{ max-width: 620px; color: var(--text-muted); font-size: 16px; }
+  .about-body strong{ color: var(--text-primary); font-weight: 600; }
+
+  /* ---------- EXPERIENCE TIMELINE ---------- */
+  .timeline{ position:relative; padding-left: 34px; }
+  .timeline::before{
+    content:""; position:absolute; left:9px; top:6px; bottom:6px; width:1px;
+    background: var(--border);
+  }
+  .tl-item{ position:relative; margin-bottom: 34px; }
+  .tl-item:last-child{ margin-bottom:0; }
+  .tl-marker{
+    position:absolute; left:-34px; top:2px;
+    width: 20px; height:20px; border-radius:50%;
+    background: var(--bg-panel); border: 1px solid var(--accent-teal);
+    display:flex; align-items:center; justify-content:center;
+    font-family: var(--mono); font-size: 10px; color: var(--accent-teal);
+  }
+  .tl-item.current .tl-marker{
+    background: var(--accent-teal); color: #062522;
+    box-shadow: 0 0 0 4px rgba(79,209,197,0.15);
+    animation: markerPulse 2.4s ease-in-out infinite;
+  }
+  @keyframes markerPulse{
+    0%,100%{ box-shadow: 0 0 0 4px rgba(79,209,197,0.15); }
+    50%{ box-shadow: 0 0 0 7px rgba(79,209,197,0.06); }
+  }
+  @media (prefers-reduced-motion: reduce){ .tl-item.current .tl-marker{ animation:none; } }
+  .tl-meta{
+    font-family: var(--mono); font-size: 12px; color: var(--text-dim);
+    display:flex; gap:10px; flex-wrap:wrap; margin-bottom: 4px;
+  }
+  .tl-status{
+    font-size: 11px; padding: 1px 8px; border-radius: 20px;
+    border: 1px solid var(--accent-teal); color: var(--accent-teal);
+  }
+  .tl-item:not(.current) .tl-status{ border-color: var(--text-dim); color: var(--text-dim); }
+  .tl-role{ font-size: 18px; font-weight: 700; margin: 2px 0; }
+  .tl-company{ color: var(--accent-teal); font-family: var(--mono); font-size: 14px; }
+  .tl-desc{ color: var(--text-muted); margin-top: 8px; font-size: 15px; max-width: 560px; }
+  .tl-desc ul{ margin: 8px 0 0; padding-left: 18px; }
+  .tl-desc li{ margin-bottom: 4px; }
+  .tl-stack{
+    display:flex; gap:6px; flex-wrap:wrap; margin-top: 10px;
+  }
+  .tl-stack span{
+    font-family: var(--mono); font-size: 11px; color: var(--text-muted);
+    border: 1px solid var(--border); border-radius: 20px; padding: 2px 10px;
+    transition: border-color .15s ease, color .15s ease;
+  }
+  .tl-stack span:hover{ border-color: var(--accent-teal); color: var(--accent-teal); }
+
+  /* ---------- LINUX / HOMELAB (neofetch carousel) ---------- */
+  .neofetch-carousel{ position: relative; }
+  .neofetch-carousel:focus-visible{ outline: 2px solid var(--accent-teal); outline-offset: 6px; border-radius: 10px; }
+  .neofetch-viewport{ overflow: hidden; border-radius: 8px; }
+  .neofetch-track{
+    display:flex;
+    transition: transform .35s ease;
+  }
+  @media (prefers-reduced-motion: reduce){
+    .neofetch-track{ transition: none; }
+  }
+  .neofetch-slide{
+    flex: 0 0 100%;
+    min-width: 0;
+  }
+  .neofetch-slide .term{ box-shadow:none; border-radius:0; }
+
+  .carousel-btn{
+    position:absolute; top: 50%; transform: translateY(-50%);
+    width: 36px; height:36px; border-radius:50%;
+    background: var(--bg-panel-raised); border: 1px solid var(--border);
+    color: var(--text-primary); font-family: var(--mono); font-size: 16px;
+    display:flex; align-items:center; justify-content:center;
+    cursor:pointer; z-index: 5; padding:0;
+  }
+  .carousel-btn:hover{ border-color: var(--accent-teal); color: var(--accent-teal); }
+  .carousel-btn.prev{ left: -16px; }
+  .carousel-btn.next{ right: -16px; }
+  @media (max-width: 640px){
+    .carousel-btn.prev{ left: 6px; }
+    .carousel-btn.next{ right: 6px; }
+    .carousel-btn{ background: rgba(16,21,27,0.9); }
+  }
+
+  .carousel-meta{
+    display:flex; align-items:center; justify-content:center; gap: 14px;
+    margin-top: 16px;
+  }
+  .carousel-label{
+    font-family: var(--mono); font-size: 12px; color: var(--text-dim);
+    text-transform: uppercase; letter-spacing: 0.06em;
+    min-width: 140px; text-align:center;
+  }
+  .carousel-dots{ display:flex; gap: 8px; }
+  .carousel-dot{
+    width:8px; height:8px; border-radius:50%; background: var(--border);
+    border:none; cursor:pointer; padding:0;
+  }
+  .carousel-dot.active{ background: var(--accent-teal); }
+  .carousel-hint{
+    text-align:center; font-family: var(--mono); font-size: 10.5px;
+    color: var(--text-dim); margin-top: 8px;
+  }
+
+  .neofetch{ display:grid; grid-template-columns: auto 1fr; gap: 26px; }
+  .neofetch-ascii{
+    font-family: var(--mono); font-size: 11px; line-height:1.25;
+    white-space: pre; opacity: 0.95;
+  }
+  .neofetch-info{ font-family: var(--mono); font-size: 13.5px; }
+  .neofetch-info .row{ display:flex; gap: 10px; margin-bottom: 6px; }
+  .neofetch-info .k{ color: var(--accent-amber); min-width: 100px; }
+  .neofetch-info .v{ color: var(--text-muted); }
+  @media (max-width: 640px){
+    .neofetch{ grid-template-columns: 1fr; }
+    .neofetch-ascii{ display:none; }
+  }
+  .homelab-note{
+    margin-top: 22px; padding: 14px 16px; border-left: 2px solid var(--accent-amber);
+    background: var(--bg-panel); font-size: 14.5px; color: var(--text-muted);
+  }
+  .homelab-note strong{ color: var(--text-primary); }
+  .homelab-note a{ color: var(--accent-teal); }
+
+  /* ---------- PROJECTS ---------- */
+  .projects-grid{
+    display:grid; grid-template-columns: repeat(auto-fit, minmax(230px,1fr));
+    gap: 16px;
+  }
+  .project-card{
+    background: var(--bg-panel); border: 1px solid var(--border); border-radius: 8px;
+    padding: 20px; transition: border-color .15s ease, transform .15s ease;
+  }
+  .project-card:hover{ border-color: var(--accent-teal); transform: translateY(-2px); }
+  .project-tag{
+    font-family: var(--mono); font-size: 10px; color: var(--bg);
+    background: var(--accent-amber); display:inline-block;
+    padding: 2px 8px; border-radius: 20px; margin-bottom: 10px;
+    text-transform: uppercase; letter-spacing: 0.04em;
+  }
+  .project-tag.live{ background: var(--accent-teal); }
+  .project-card h3{ margin: 0 0 8px; font-size: 16px; }
+  .project-card p{ margin:0; color: var(--text-muted); font-size: 14px; }
+  .project-card a.visit{ display:inline-block; margin-top:10px; font-family: var(--mono); font-size: 12.5px; }
+
+  /* ---------- EDUCATION ---------- */
+  .edu-item{ margin-bottom: 20px; }
+  .edu-item:last-child{ margin-bottom:0; }
+  .edu-school{ font-weight:700; font-size:16px; }
+  .edu-meta{ font-family: var(--mono); font-size: 12px; color: var(--text-dim); }
+  .edu-desc{ color: var(--text-muted); font-size: 14.5px; margin-top:4px; }
+
+  /* ---------- INTERACTIVE TERMINAL ---------- */
+  .shell-term .term-body{ padding: 16px 18px; }
+  .shell-output{ max-height: 260px; overflow-y: auto; margin-bottom: 6px; }
+  .shell-output::-webkit-scrollbar{ width: 6px; }
+  .shell-output::-webkit-scrollbar-thumb{ background: var(--border); border-radius: 4px; }
+  .shell-line{ margin: 0 0 4px; }
+  .shell-line.cmd{ color: var(--text-primary); }
+  .shell-line.cmd::before{ content:"visitor@skinderviken:~$ "; color: var(--accent-teal); }
+  .shell-line.out{ color: var(--text-muted); white-space: pre-wrap; }
+  .shell-line.err{ color: var(--accent-amber); }
+  .shell-inputrow{ display:flex; align-items:center; gap: 8px; }
+  .shell-prompt{ color: var(--accent-teal); font-family: var(--mono); font-size: 13.5px; white-space:nowrap; }
+  .shell-input{
+    flex: 1; background: transparent; border: none; outline: none;
+    color: var(--text-primary); font-family: var(--mono); font-size: 13.5px;
+    caret-color: var(--accent-teal);
+  }
+  .shell-help-hint{
+    margin-top: 10px; font-family: var(--mono); font-size: 11.5px; color: var(--text-dim);
+  }
+  .shell-help-hint code{
+    background: var(--bg-panel-raised); border:1px solid var(--border); border-radius:4px;
+    padding: 1px 6px; color: var(--accent-teal);
+  }
+
+  /* ---------- CONTACT ---------- */
+  .contact-grid{ display:flex; gap: 14px; flex-wrap:wrap; }
+  .contact-link{
+    font-family: var(--mono); font-size: 14px;
+    border: 1px solid var(--border); border-radius: 6px;
+    padding: 10px 16px; color: var(--text-primary);
+    display:flex; align-items:center; gap:8px;
+    background: none; cursor: pointer;
+    transition: border-color .15s ease, color .15s ease;
+  }
+  .contact-link:hover{ border-color: var(--accent-teal); text-decoration:none; color: var(--accent-teal); }
+  .contact-link .dot{ width:6px; height:6px; border-radius:50%; background: var(--accent-teal); }
+  .copied-toast{
+    font-family: var(--mono); font-size: 12px; color: var(--accent-teal);
+    margin-left: 4px; opacity: 0; transition: opacity .2s ease;
+  }
+  .copied-toast.show{ opacity: 1; }
+
+  footer{
+    padding: 30px 0 50px; text-align:center;
+    font-family: var(--mono); font-size: 12px; color: var(--text-dim);
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="nav-left">
+      <div class="nav-logo">~/<span>portfolio</span></div>
+      <div class="nav-clock"><span class="dot"></span><span id="navClockText">--:--:--</span></div>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#about">about</a></li>
+      <li><a href="#experience">experience</a></li>
+      <li><a href="#linux">linux</a></li>
+      <li><a href="#projects">projects</a></li>
+      <li><a href="#contact">contact</a></li>
+      <li><button class="nav-search-btn" id="openSearch" aria-haspopup="dialog">search <kbd>⌘K</kbd></button></li>
+      <li><button class="nav-search-btn" id="themeToggle" aria-label="Toggle color theme">☀ light</button></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="cmdk-overlay" id="cmdkOverlay" hidden>
+  <div class="cmdk-modal" role="dialog" aria-modal="true" aria-label="Quick search">
+    <div class="cmdk-inputrow">
+      <span class="prompt">›</span>
+      <input type="text" class="cmdk-input" id="cmdkInput" placeholder="Search sections, projects, links..." autocomplete="off" autocapitalize="off" spellcheck="false">
+    </div>
+    <ul class="cmdk-list" id="cmdkList"></ul>
+    <div class="cmdk-footer">
+      <span><kbd>↑</kbd><kbd>↓</kbd> navigate</span>
+      <span><kbd>enter</kbd> select</span>
+      <span><kbd>esc</kbd> close</span>
+    </div>
+  </div>
+</div>
+
+<header class="hero">
+  <canvas class="hero-canvas" id="heroCanvas" aria-hidden="true"></canvas>
+  <div class="wrap hero-content">
+    <p class="hero-eyebrow">ssh victor@skinderviken.it</p>
     <h1 class="hero-name">Victor Skinderviken<span class="cursor"></span></h1>
     <p class="hero-role">Operation Technician @ Orange</p>
     <p class="hero-desc">
